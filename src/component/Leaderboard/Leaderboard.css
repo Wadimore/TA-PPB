@@ -1,0 +1,39 @@
+.container-lead, .header-lead{
+    width: 90vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid grey;
+    padding: 10px 0;
+}
+
+.header-lead{
+    background-color: #19202c;
+}
+
+.container-profile{
+    width: 25vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.container-profile > p{
+    width: 150px;
+    text-align: center;
+}
+
+#logo-lead{
+    width: 60px;
+}
+
+.container-lead .profile{
+    margin: auto;
+}
+
+.container-lead:last-child{
+    margin-bottom: 100px;
+}

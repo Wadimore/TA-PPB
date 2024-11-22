@@ -1,0 +1,150 @@
+/* Base styles for stickers container */
+.stickers-container {
+    padding: 20px;
+    background-color: #2b2b2b;
+    color: #ffffff;
+    text-align: center;
+    min-height: 100vh;
+}
+
+.stickers-title {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #ff9c00;
+}
+
+/* Loading indicator */
+.stickers-loading {
+    font-size: 1.5em;
+    color: #ffffff;
+}
+
+/* Grid layout for sticker cards */
+.stickers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Individual sticker card */
+.sticker-card {
+    background-color: #3a3f44;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.sticker-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Sticker image */
+.sticker-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Sticker name and description */
+.sticker-name {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #ff9c00;
+}
+
+.sticker-description {
+    font-size: 0.9em;
+    color: #d0d0d0;
+    margin-bottom: 15px;
+}
+
+/* Sticker details (rarity and event) */
+.sticker-details {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.sticker-rarity {
+    font-weight: bold;
+}
+
+.sticker-event {
+    font-style: italic;
+    color: #c0c0c0;
+}
+
+/* Sticker team */
+.sticker-team {
+    font-size: 0.9em;
+    margin-top: 10px;
+    color: #ffffff;
+}
+
+/* Filter container */
+.stickers-filter {
+    margin-bottom: 20px;
+}
+
+.stickers-search-input {
+    padding: 10px;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid #FFFFFF;
+    background-color: #2c2f33;
+    color: #FFFFFF;
+    font-size: 1em;
+    outline: none;
+}
+
+.stickers-search-input:focus {
+    border: 1px solid #ff9c00;
+}
+
+/* Pastikan footer tidak tumpang tindih */
+footer {
+    position: sticky; /* Biarkan footer mengikuti dokumen */
+    z-index: 1;
+}
+
+/* Pagination styles */
+.paginationBtn {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+    list-style: none;
+}
+
+.paginationBtn a {
+    padding: 12px 20px;
+    border-radius: 5px;
+    background-color: #3a3f44;
+    color: #FFFFFF;
+    font-weight: bold;
+    text-decoration: none;
+    border: 1px solid #FFFFFF;
+    transition: all 0.3s ease-in-out;
+}
+
+.paginationBtn a:hover {
+    background-color: #ff9c00;
+    color: #000;
+}
+
+.paginationActive a {
+    background-color: #ff9c00;
+    color: #000;
+}
+
+.paginationDisabled a {
+    background-color: #555555;
+    color: #888888;
+    border: 1px solid #555555;
+    cursor: not-allowed;
+}

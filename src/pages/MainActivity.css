@@ -1,0 +1,189 @@
+/* Base styling for containers */
+.container-team, .container-players, .container-about {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Header and filter container */
+/* Header styling dengan gradasi */
+.header-filter {
+    text-align: center;
+    margin: 20px 0;
+    padding: 20px 0;
+    background: linear-gradient(45deg, #ff7a18, #af002d);
+    border-radius: 12spx;
+}
+
+.header-filter h1 {
+    font-size: 2.5em;
+    color: #FFFFFF;
+    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+    margin-bottom: 15px;
+}
+
+.filter-input {
+    padding: 12px;
+    width: 300px;
+    border-radius: 8px;
+    border: 2px solid #FFFFFF;
+    background-color: #1e1e1e;
+    color: #FFFFFF;
+    font-size: 1em;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.filter-input:focus {
+    border: 2px solid #ff9c00;
+    box-shadow: 0 0 10px #ff9c00;
+}
+
+/* Kartu tim dengan gambar dan efek glossy */
+.team-card {
+    background: linear-gradient(145deg, #543a6b, #6d4b8b);
+    color: #FFFFFF;
+    width: 100%;
+    max-width: 280px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.content {
+    padding-bottom: 60px; /* Sesuaikan dengan tinggi footer */
+}
+
+.team-card:hover {
+    transform: translateY(-5px); /* Efek hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Shadow lebih menonjol */
+    background-color: #ff9c00;
+    color: #000000;
+}
+/* Update untuk grid layout */
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dua kolom */
+    gap: 20px; /* Spasi antar elemen */
+    width: 90%; /* Lebar grid */
+    margin: 0 auto; /* Pusatkan grid */
+    justify-items: center; /* Pusatkan elemen secara horizontal */
+}
+
+/* Update untuk pagination agar tetap di tengah */
+.paginationBtn {
+    display: flex;
+    justify-content: center; /* Pusatkan pagination */
+    margin-top: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+.paginationBtn a {
+    padding: 12px 20px; /* Perbesar tombol pagination */
+    margin: 0 5px;
+    border-radius: 5px;
+    background-color: #3a3f44;
+    color: #FFFFFF;
+    font-weight: bold;
+    text-decoration: none;
+    border: 1px solid #FFFFFF;
+    transition: all 0.3s ease-in-out;
+}
+
+.paginationBtn a:hover {
+    background-color: #ff9c00;
+    color: #000;
+}
+.paginationActive a {
+    background-color: #ff9c00;
+    color: #000;
+}
+
+.paginationDisabled a {
+    background-color: #555555;
+    color: #888888;
+    border: 1px solid #555555;
+    cursor: not-allowed;
+}
+
+/* Loading spinner */
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+/* About page container */
+.container-about {
+    height: 70vh;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.container-about h1 {
+    font-size: 2.5em;
+    color: #FFFFFF;
+}
+
+.container-about p {
+    font-size: 1.2em;
+    color: #FFFFFF;
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 1024px) {
+    .filter-input {
+        width: 70%; /* Input lebih fleksibel di tablet */
+    }
+
+    .team-card {
+        width: 100%; /* Kartu memenuhi layar kecil */
+        margin: 10px 0;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .header-filter h1 {
+        font-size: 1.8em; /* Ukuran font header lebih kecil */
+    }
+
+    .filter-input {
+        width: 80%; /* Input lebih kecil untuk ponsel */
+    }
+
+    .team-card {
+        width: 95%; /* Lebar penuh untuk ponsel */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .header-filter h1 {
+        font-size: 1.5em;
+    }
+
+    .filter-input {
+        font-size: 0.9em;
+        padding: 8px;
+    }
+
+    .team-card {
+        padding: 10px;
+        font-size: 0.9em; /* Ukuran font lebih kecil */
+    }
+
+    .paginationBtn a {
+        padding: 8px;
+        font-size: 0.9em;
+    }
+}

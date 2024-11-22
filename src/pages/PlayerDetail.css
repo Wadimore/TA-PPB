@@ -1,0 +1,78 @@
+/* PlayerDetail.css */
+
+.player-detail-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    background-color: #1e1e2f;
+    padding: 20px;
+}
+
+.player-card {
+    background-color: #2a2a3d;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    width: 80%;
+    max-width: 600px;
+    color: #f0f0f5;
+    text-align: center;
+}
+
+.match-name {
+    font-size: 1.4em;
+    color: #66bb6a;
+    margin-bottom: 20px;
+}
+
+.player-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.player-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 3px solid #66bb6a;
+}
+
+.player-name {
+    font-size: 2em;
+    margin: 0;
+}
+
+.team-name {
+    font-size: 1.2em;
+    color: #999;
+    margin: 10px 0;
+}
+
+.team-name span {
+    color: #f0f0f5;
+    font-weight: bold;
+}
+
+.stat-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    width: 100%;
+    margin-top: 20px;
+    font-size: 1em;
+}
+
+.stat-details p {
+    background-color: #33334a;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 0;
+}
+
+.stat-details p span {
+    font-weight: bold;
+    color: #66bb6a;
+}
