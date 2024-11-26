@@ -1,2 +1,2 @@
 # CSInfo.gg
-<a href="" target="_blank">Link to Project</a>
+<a href="https://csinfo-ac2df.web.app/teams" target="_blank">Link to Project</a>
