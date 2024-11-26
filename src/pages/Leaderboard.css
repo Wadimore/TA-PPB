@@ -91,3 +91,31 @@
     font-weight: bold;
 }
 
+/* Pastikan container utama memiliki tinggi minimal 100vh */
+main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Styling untuk tampilan jika tidak ada data */
+.no-data {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    font-size: 1.5em;
+}
+
+/* Navbar tetap berada di bawah */
+.navbar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #222;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 10px;
+}

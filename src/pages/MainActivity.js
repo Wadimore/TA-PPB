@@ -9,7 +9,7 @@ export default function MainActivity() {
     const [data, setData] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [currentPage, setCurrentPage] = useState(0);
-    const [filter, setFilter] = useState(""); // State untuk filter input
+    const [filter, setFilter] = useState(""); 
 
     useEffect(() => {
         const fetchTeams = async () => {
@@ -28,7 +28,7 @@ export default function MainActivity() {
         fetchTeams();
     }, []);
 
-    const perPage = 16; // Jumlah data per halaman
+    const perPage = 16; 
     const pageVisited = currentPage * perPage;
     const filteredData = data.filter(team =>
         team.Name.toLowerCase().includes(filter.toLowerCase())

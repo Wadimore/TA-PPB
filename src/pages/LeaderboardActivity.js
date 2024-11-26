@@ -51,41 +51,45 @@ export default function LeaderboardActivity() {
 
     return (
         <main>
-            <div className="date-picker">
-                <label htmlFor="date">Select Date: </label>
-                <input
-                    type="date"
-                    id="date"
-                    value={selectedDate}
-                    onChange={handleDateChange}
-                    max={formatDate(new Date())} // Prevent future dates
-                />
+        <div className="date-picker">
+            <label htmlFor="date">Select Date: </label>
+            <input
+                type="date"
+                id="date"
+                value={selectedDate}
+                onChange={handleDateChange}
+                max={formatDate(new Date())} // Prevent future dates
+            />
+        </div>
+        {isLoading ? (
+            <div className="loading">
+                <Loader type="Rings" color="#00BFFF" height={200} width={200} />
             </div>
-            {isLoading ? (
-                <div className="loading">
-                    <Loader type="Rings" color="#00BFFF" height={200} width={200} />
+        ) : sortedLeaderboardData.length > 0 ? (
+            <div className="container-teams">
+                <div className="player-desc">
+                    <h1>Leaderboard</h1>
                 </div>
-            ) : (
-                <div className="container-teams">
-                    <div className="player-desc">
-                        <h1>Leaderboard</h1>
-                    </div>
-                    <HeaderLeaderboard rankDesc="Rank" teamsDesc="Player" rateDesc="Rating" />
-                    {sortedLeaderboardData.map((player, index) => (
-                        <Leaderboard
-                            key={`${player.PlayerId}-${player.GameId}-${index}`} // Unique key
-                            name={player.Name}
-                            team={player.Team}
-                            kills={player.Kills}
-                            assists={player.Assists}
-                            deaths={player.Deaths}
-                            rating={player.Rating}
-                            number={index + 1}
-                            playerId={player.PlayerId}
-                        />
-                    ))}
-                </div>
-            )}
-        </main>
+                <HeaderLeaderboard rankDesc="Rank" teamsDesc="Player" rateDesc="Rating" />
+                {sortedLeaderboardData.map((player, index) => (
+                    <Leaderboard
+                        key={`${player.PlayerId}-${player.GameId}-${index}`} // Unique key
+                        name={player.Name}
+                        team={player.Team}
+                        kills={player.Kills}
+                        assists={player.Assists}
+                        deaths={player.Deaths}
+                        rating={player.Rating}
+                        number={index + 1}
+                        playerId={player.PlayerId}
+                    />
+                ))}
+            </div>
+        ) : (
+            <div className="no-data">
+                <h2>No events available for the selected date</h2>
+            </div>
+        )}
+    </main>    
     );
 }

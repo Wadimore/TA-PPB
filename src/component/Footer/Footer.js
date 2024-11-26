@@ -3,7 +3,7 @@ import { FaTrophy } from 'react-icons/fa';
 import { RiHomeFill, RiAliensFill } from 'react-icons/ri';
 import { NavLink } from 'react-router-dom';
 import './Footer.css';
-import { GiPistolGun } from 'react-icons/gi'; // Import ikon senjata
+import { GiPistolGun } from 'react-icons/gi'; 
 import { IoIosAlbums } from "react-icons/io";
 
 export default function Footer() {
@@ -16,7 +16,7 @@ export default function Footer() {
                 <NavLink to="/leaderboard" className="nav-link" activeClassName="active-link">
                     <FaTrophy size="25px" />
                 </NavLink>
-                <NavLink to="/skins" className="nav-link" activeClassName="active-link"> {/* New NavLink for Skins */}
+                <NavLink to="/skins" className="nav-link" activeClassName="active-link"> 
                     <GiPistolGun size="25px" />
                 </NavLink>
                 <NavLink to="/stickers" className="nav-link" activeClassName="active-link">
